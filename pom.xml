@@ -24,6 +24,18 @@
 
   <dependencies>
 
+	<dependency>
+		<groupID>com.opencsv</groupid>
+		<version>5.9</version>
+	</dependency>
+
+	<!--- JUnit ---->
+	<dependency>
+		<groupid>org.junit.jupiter</groupid>
+		<artifactId>junit-jupiter</artifactId>
+	
+	
+
     <!-- JSON mapper -->
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
