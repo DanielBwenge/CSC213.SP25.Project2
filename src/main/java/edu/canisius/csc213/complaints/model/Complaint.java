@@ -1,9 +1,8 @@
 package edu.canisius.csc213.complaints.model;
 
-import com.opencsv.bean.CsvBindByName;
-
-import java.time.LocalDate;
 import java.util.Arrays;
+
+import com.opencsv.bean.CsvBindByName;
 
 public class Complaint {
 
@@ -230,6 +229,12 @@ public class Complaint {
         this.embedding = embedding;
     }
 
+    // Allows all other classes to access the complaint ID without
+    // exposing the entire complaint object
+    public long getId() {
+        return this.complaintId;
+    }
+
     // === toString() for debugging ===
     @Override
     public String toString() {
@@ -240,5 +245,4 @@ public class Complaint {
                 ", embedding preview=" + (embedding != null ? Arrays.toString(Arrays.copyOf(embedding, Math.min(5, embedding.length))) + "..." : "null") +
                 '}';
     }
-
 }
